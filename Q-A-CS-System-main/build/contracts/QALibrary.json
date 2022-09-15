@@ -1,0 +1,750 @@
+{
+  "contractName": "QALibrary",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Andrea Lisi, Samuel Fabrizi\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/lapulasman/\\u684c\\u9762/custumServe/contracts/Q&ALibrary.sol\":\"QALibrary\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/lapulasman/\\u684c\\u9762/custumServe/contracts/Q&ALibrary.sol\":{\"keccak256\":\"0xbd0d50893800d75d051d1dd74688c49d814300afa440a40ed5d844ada71e3501\",\"license\":\"SimPL-2.0\",\"urls\":[\"bzz-raw://d92c38654c4e36ebfea7160ef7e2aed6a47d8bfb8a4ef952e41e56e34c560df8\",\"dweb:/ipfs/QmVpCn7wYdNRpprVaaRR3tmV7abE9mq5x5g2J9BfBveTeP\"]}},\"version\":1}",
+  "bytecode": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212209bd9447b19856a865b1a36b9d3d356077e27d83d4e43593bc9e6cbeefe48656264736f6c63430008060033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212209bd9447b19856a865b1a36b9d3d356077e27d83d4e43593bc9e6cbeefe48656264736f6c63430008060033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "108:404:5:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;108:404:5;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "108:404:5:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: SimPL-2.0\r\npragma solidity >=0.8.0;\r\n/// @author Andrea Lisi, Samuel Fabrizi\r\n\r\nlibrary QALibrary {\r\n\r\n    // Rating data bundle\r\n    struct Questions {\r\n        address Item;\r\n        uint Time;\r\n        string IPFS;\r\n        // Other data to define\r\n    }\r\n    struct Answers {\r\n        address Question;\r\n        uint Time;\r\n        string IPFS;\r\n    }\r\n\r\n    struct Rating {\r\n        address Question;\r\n        uint answerIndex;\r\n        uint Time;\r\n        uint8 Score;\r\n    }\r\n}\r\n",
+  "sourcePath": "/home/lapulasman/桌面/custumServe/contracts/Q&ALibrary.sol",
+  "ast": {
+    "absolutePath": "/home/lapulasman/桌面/custumServe/contracts/Q&ALibrary.sol",
+    "exportedSymbols": {
+      "QALibrary": [
+        1025
+      ]
+    },
+    "id": 1026,
+    "license": "SimPL-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1000,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:24:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 1001,
+          "nodeType": "StructuredDocumentation",
+          "src": "65:41:5",
+          "text": "@author Andrea Lisi, Samuel Fabrizi"
+        },
+        "fullyImplemented": true,
+        "id": 1025,
+        "linearizedBaseContracts": [
+          1025
+        ],
+        "name": "QALibrary",
+        "nameLocation": "116:9:5",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "QALibrary.Questions",
+            "id": 1008,
+            "members": [
+              {
+                "constant": false,
+                "id": 1003,
+                "mutability": "mutable",
+                "name": "Item",
+                "nameLocation": "198:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1008,
+                "src": "190:12:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1002,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "190:7:5",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1005,
+                "mutability": "mutable",
+                "name": "Time",
+                "nameLocation": "218:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1008,
+                "src": "213:9:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1004,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "213:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1007,
+                "mutability": "mutable",
+                "name": "IPFS",
+                "nameLocation": "240:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1008,
+                "src": "233:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1006,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "233:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Questions",
+            "nameLocation": "169:9:5",
+            "nodeType": "StructDefinition",
+            "scope": 1025,
+            "src": "162:123:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "QALibrary.Answers",
+            "id": 1015,
+            "members": [
+              {
+                "constant": false,
+                "id": 1010,
+                "mutability": "mutable",
+                "name": "Question",
+                "nameLocation": "325:8:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1015,
+                "src": "317:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1009,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "317:7:5",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1012,
+                "mutability": "mutable",
+                "name": "Time",
+                "nameLocation": "349:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1015,
+                "src": "344:9:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1011,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "344:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1014,
+                "mutability": "mutable",
+                "name": "IPFS",
+                "nameLocation": "371:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1015,
+                "src": "364:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1013,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "364:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Answers",
+            "nameLocation": "298:7:5",
+            "nodeType": "StructDefinition",
+            "scope": 1025,
+            "src": "291:92:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "QALibrary.Rating",
+            "id": 1024,
+            "members": [
+              {
+                "constant": false,
+                "id": 1017,
+                "mutability": "mutable",
+                "name": "Question",
+                "nameLocation": "424:8:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1024,
+                "src": "416:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1016,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "416:7:5",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1019,
+                "mutability": "mutable",
+                "name": "answerIndex",
+                "nameLocation": "448:11:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1024,
+                "src": "443:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1018,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "443:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1021,
+                "mutability": "mutable",
+                "name": "Time",
+                "nameLocation": "475:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1024,
+                "src": "470:9:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1020,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "470:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1023,
+                "mutability": "mutable",
+                "name": "Score",
+                "nameLocation": "496:5:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1024,
+                "src": "490:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1022,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "490:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Rating",
+            "nameLocation": "398:6:5",
+            "nodeType": "StructDefinition",
+            "scope": 1025,
+            "src": "391:118:5",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1026,
+        "src": "108:404:5",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:475:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/lapulasman/桌面/custumServe/contracts/Q&ALibrary.sol",
+    "exportedSymbols": {
+      "QALibrary": [
+        1025
+      ]
+    },
+    "id": 1026,
+    "license": "SimPL-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1000,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:24:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 1001,
+          "nodeType": "StructuredDocumentation",
+          "src": "65:41:5",
+          "text": "@author Andrea Lisi, Samuel Fabrizi"
+        },
+        "fullyImplemented": true,
+        "id": 1025,
+        "linearizedBaseContracts": [
+          1025
+        ],
+        "name": "QALibrary",
+        "nameLocation": "116:9:5",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "QALibrary.Questions",
+            "id": 1008,
+            "members": [
+              {
+                "constant": false,
+                "id": 1003,
+                "mutability": "mutable",
+                "name": "Item",
+                "nameLocation": "198:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1008,
+                "src": "190:12:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1002,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "190:7:5",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1005,
+                "mutability": "mutable",
+                "name": "Time",
+                "nameLocation": "218:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1008,
+                "src": "213:9:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1004,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "213:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1007,
+                "mutability": "mutable",
+                "name": "IPFS",
+                "nameLocation": "240:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1008,
+                "src": "233:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1006,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "233:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Questions",
+            "nameLocation": "169:9:5",
+            "nodeType": "StructDefinition",
+            "scope": 1025,
+            "src": "162:123:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "QALibrary.Answers",
+            "id": 1015,
+            "members": [
+              {
+                "constant": false,
+                "id": 1010,
+                "mutability": "mutable",
+                "name": "Question",
+                "nameLocation": "325:8:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1015,
+                "src": "317:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1009,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "317:7:5",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1012,
+                "mutability": "mutable",
+                "name": "Time",
+                "nameLocation": "349:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1015,
+                "src": "344:9:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1011,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "344:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1014,
+                "mutability": "mutable",
+                "name": "IPFS",
+                "nameLocation": "371:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1015,
+                "src": "364:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1013,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "364:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Answers",
+            "nameLocation": "298:7:5",
+            "nodeType": "StructDefinition",
+            "scope": 1025,
+            "src": "291:92:5",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "QALibrary.Rating",
+            "id": 1024,
+            "members": [
+              {
+                "constant": false,
+                "id": 1017,
+                "mutability": "mutable",
+                "name": "Question",
+                "nameLocation": "424:8:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1024,
+                "src": "416:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1016,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "416:7:5",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1019,
+                "mutability": "mutable",
+                "name": "answerIndex",
+                "nameLocation": "448:11:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1024,
+                "src": "443:16:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1018,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "443:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1021,
+                "mutability": "mutable",
+                "name": "Time",
+                "nameLocation": "475:4:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1024,
+                "src": "470:9:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1020,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "470:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1023,
+                "mutability": "mutable",
+                "name": "Score",
+                "nameLocation": "496:5:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 1024,
+                "src": "490:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1022,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "490:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Rating",
+            "nameLocation": "398:6:5",
+            "nodeType": "StructDefinition",
+            "scope": 1025,
+            "src": "391:118:5",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1026,
+        "src": "108:404:5",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:475:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.6+commit.11564f7e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-08-31T10:34:16.840Z",
+  "devdoc": {
+    "author": "Andrea Lisi, Samuel Fabrizi",
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
